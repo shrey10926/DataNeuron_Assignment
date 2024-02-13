@@ -37,7 +37,7 @@ Docker
 {"text1" : "nuclear body seeks new tech....","text2" : "terror suspect face arrest...."}
 
 ## Response body
-{"similarity score" : 0.2}
+{"similarity_score" : 0.2}
 
 ## NOTE
 Please test the API using the below URL in Postman. Simply open Postman, select the Body option, then select raw and finally select JSON option from the dropdown menu. Then paste the below URL in the URL section and don't forget to select POST. 
