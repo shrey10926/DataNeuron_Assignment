@@ -24,7 +24,7 @@ Docker
 
     The dataset provided (.csv file) was first analysed to observe if any cleaning/preprocessing was needed. After analysing the data some preprocessing steps were performed to clean the data.
 
-    Then this cleaned dataset was used to fine tune a sentence transformer model in order to generate embeddings on this custom dataset. The fine tuning code is available in the Fine_Tune_Embed.ipynb file.
+    Then this cleaned dataset was used to fine tune a sentence transformer model in order to generate embeddings on this custom dataset. The fine tuning code is available in the training.py file.
 
     This fine-tuned model was then used in the inferencing phase to generate embeddings which were then used to calculate the cosine similarity between the pair of sentences provided in the API request.
 
