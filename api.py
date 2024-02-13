@@ -11,30 +11,36 @@ import logging
 
 app = Flask(__name__)
 
+#define the route which uses the POST method
 @app.route('/match_text', methods=['POST'])
 def similarity():
 
     try:
 
+        #get the request data
         data = request.get_json()
 
+        #verify whether request data contains a pair of text
         if 'text1' not in data or 'text2' not in data:
             return jsonify({'error': 'Both text1 and text2 must be provided.'}), 400
 
+        #remove the extra whitespaces
         new_data = {}
         for k, v in data.items():
             v = re.sub(r'\s+', ' ', v)
             new_data[k] = v
 
+        #fetch the sentences
         sentences1 = new_data['text1']
         sentences2 = new_data['text2']
 
+        #vectorize both the pair of sentences
         embeddings1 = model.encode(sentences1, convert_to_tensor=True)
         embeddings2 = model.encode(sentences2, convert_to_tensor=True)
 
+        #calculate the cosine similarity
         cosine_scores = util.cos_sim(embeddings1, embeddings2)
 
-        print(f'{cosine_scores[0][0].item()}')
         return jsonify({'similarity_score': cosine_scores[0][0].item()}), 200
 
     except Exception as e:
