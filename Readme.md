@@ -21,6 +21,7 @@ Docker
 
 ## Approach
 1. Part-A
+
     The dataset provided (.csv file) was first analysed to observe if any cleaning/preprocessing was needed. After analysing the data some preprocessing steps were performed to clean the data.
 
     Then this cleaned dataset was used to fine tune a sentence transformer model in order to generate embeddings on this custom dataset. The fine tuning code is available in the Fine_Tune_Embed.ipynb file.
@@ -29,6 +30,7 @@ Docker
 
 
 2. Part-B
+
     Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. After the API was developed, a Docker image of the API was deployed on HuggingFace.
 
     The request and response have beed kept as mentioned in the instruction PDF:
