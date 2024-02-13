@@ -44,3 +44,8 @@ Please test the API using the below URL in Postman. Simply open Postman, select 
 The request and response have beed kept as mentioned in the instruction PDF
 
 URL : http://172.179.1.93:5801/match_text
+
+
+
+
+![Screenshot from 2024-02-13 23-22-45](https://github.com/shrey10926/DataNeuron_Assignment/assets/79737465/3987c9a5-426a-4006-af2c-9c8f30bef01a)
