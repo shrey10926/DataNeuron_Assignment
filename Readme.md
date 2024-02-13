@@ -31,7 +31,7 @@ Docker
 
 2. Part-B
 
-    Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. After the API was developed, a Docker image of the API was deployed on Azure instance.
+    Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. api.py contains the API code. After the API was developed, a Docker image of the API was deployed on Azure instance.
 
 ## Request body
 {"text1" : "nuclear body seeks new tech....","text2" : "terror suspect face arrest...."}
