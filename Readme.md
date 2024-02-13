@@ -8,29 +8,36 @@ The API utilizes a fine-tuned sentence-transformer model. Transformer models, su
 
 ## Tech Stack
 Python
+
 Flask
+
 PyTorch
+
 Sentence-Transformer
+
 HuggingFace
+
 Docker
 
 ## Approach
 1. Part-A
-The dataset provided (.csv file) was first analysed to observe if any cleaning/preprocessing was needed. After analysing the data some preprocessing steps were performed to clean the data.
+    The dataset provided (.csv file) was first analysed to observe if any cleaning/preprocessing was needed. After analysing the data some preprocessing steps were performed to clean the data.
 
-Then this cleaned dataset was used to fine tune a sentence transformer model in order to generate embeddings on this custom dataset.
+    Then this cleaned dataset was used to fine tune a sentence transformer model in order to generate embeddings on this custom dataset.
 
-This fine-tuned model was then used in the inferencing phase to generate embeddings which were then used to calculate the cosine similarity between the pair of sentences provided in the API request.
+    This fine-tuned model was then used in the inferencing phase to generate embeddings which were then used to calculate the cosine similarity between the pair of sentences provided in the API request.
 
 
 2. Part-B
-Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. After the API was developed, a Docker image of the API was deployed on HuggingFace.
+    Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. After the API was developed, a Docker image of the API was deployed on HuggingFace.
 
-The request and response have beed kept as mentioned in the instruction PDF:
+    The request and response have beed kept as mentioned in the instruction PDF:
 
-Request body : {"text1" : "nuclear body seeks new tech....","text2" : "terror suspect face arrest...."}
+## Request body
+{"text1" : "nuclear body seeks new tech....","text2" : "terror suspect face arrest...."}
 
-Response body : {"similarity score" : 0.2}
+## Response body
+{"similarity score" : 0.2}
 
 NOTE : Please test the API using the below URL in Postman.
 URL : http://172.179.1.93:5801/match_text
