@@ -40,6 +40,7 @@ Docker
 {"similarity score" : 0.2}
 
 ## NOTE
-Please test the API using the below URL in Postman. The request and response have beed kept as mentioned in the instruction PDF
+Please test the API using the below URL in Postman. Simply open Postman, select the Body option, then select raw and finally select JSON option from the dropdown menu. Then paste the below URL in the URL section and don't forget to select POST. 
+The request and response have beed kept as mentioned in the instruction PDF
 
 URL : http://172.179.1.93:5801/match_text
