@@ -31,9 +31,7 @@ Docker
 
 2. Part-B
 
-    Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. After the API was developed, a Docker image of the API was deployed on HuggingFace.
-
-    The request and response have beed kept as mentioned in the instruction PDF:
+    Flask framework was used in order to develop this API. The same preprocessing steps were used in the inferencing phase as were used during the training phase. After the API was developed, a Docker image of the API was deployed on Azure instance.
 
 ## Request body
 {"text1" : "nuclear body seeks new tech....","text2" : "terror suspect face arrest...."}
@@ -41,5 +39,7 @@ Docker
 ## Response body
 {"similarity score" : 0.2}
 
-NOTE : Please test the API using the below URL in Postman.
+## NOTE
+Please test the API using the below URL in Postman. The request and response have beed kept as mentioned in the instruction PDF
+
 URL : http://172.179.1.93:5801/match_text
