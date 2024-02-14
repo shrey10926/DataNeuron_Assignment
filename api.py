@@ -52,9 +52,12 @@ def similarity():
 if __name__ == '__main__':
 
     print(f'loading model...')
-
-    word_embedding_model = models.Transformer("output/sentence-transformers_all-mpnet-base-v2-2024-02-13_17-18-11", max_seq_length=512)
+    word_embedding_model = models.Transformer("sshreyy/final_similarity_model", max_seq_length=512)
     pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension())
     model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
+
+    # word_embedding_model = models.Transformer("output/sentence-transformers_all-mpnet-base-v2-2024-02-13_17-18-11", max_seq_length=512)
+    # pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension())
+    # model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
 
     app.run(debug=False, port = 5801, host = '0.0.0.0', threaded = False)
